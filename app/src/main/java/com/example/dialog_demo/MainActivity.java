@@ -91,11 +91,21 @@ public class MainActivity extends AppCompatActivity {
 //        headers['signature'] = md5(signature);
 
         String url = "ym.wc9955.com/api/v1/";
+        // vk = config.VersionKey
+        //初始值
+        String vk = "2";
+        String aseq_id = "14";
 	    long t = new Date().getTime();
 
         String rk = md5(String.valueOf(Math.random() + t)).substring(0, 8);
-        String sendStr = DESede.enD(rk, format_api(new Data(),0));
-        // vk = config.VersionKey
+        Data data = new Data();
+        data.setAseqId(aseq_id);
+        data.setChanCode("14");
+        data.setClusters_id(3);
+        data.setTid(2);
+
+        String sendStr = DESede.enD(rk, format_api(data,0));
+
         String enpKsy = rk + t;
         String pwd = DESede.enD(vk, enpKsy);
 
@@ -109,10 +119,10 @@ public class MainActivity extends AppCompatActivity {
         Map<String, String> h2 = new HashMap<String, String>();
         h2.put("checkor",checkOr);
         h2.put("pwds",pwd);
-        h2.put("datetime",t);
+        h2.put("datetime", String.valueOf(t));
         h2.put("aseq_id",aseq_id);
         h2.put("Cache-Control","no-cache");
-        h2.put("'platform'","android");
+        h2.put("platform","android");
 
         Map<String, String> newH2 = new HashMap<String, String>();
         Iterator it = h2.entrySet().iterator();

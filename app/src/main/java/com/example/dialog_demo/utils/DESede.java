@@ -26,7 +26,7 @@ public class DESede extends BaseMethod {
 //         byte[] keybytes = {(byte)0x87,(byte)0xe9,(byte)0x11,(byte)0xfe,(byte)0x82,(byte)0xce,(byte)0x8d,'S',(byte)0x08,';','9',(byte)0xd2,(byte)0xbf,'x',(byte)0x03,(byte)0x95,(byte)0x15,(byte)0x99,(byte)0xc2,(byte)0x02,(byte)0x9c,(byte)0xcb,(byte)0xaa,(byte)0xd7,'G',(byte)0x16,(byte)0xd8,(byte)0xae,(byte)0x15,'7','U',(byte)0xdb};
         byte[] keybytes = {(byte)0x87,(byte)0xe9,(byte)0x11,(byte)0xfe,(byte)0x82,(byte)0xce,(byte)0x8d,'S',(byte)0x08,';','9',(byte)0xd2,(byte)0xbf,'x',(byte)0x03,(byte)0x95,(byte)0x15,(byte)0x99,(byte)0xc2,(byte)0x02,(byte)0x9c,(byte)0xcb,(byte)0xaa,(byte)0xd7};
         byte[] ivbytes = {(byte)0x87,(byte)0xe9,(byte)0x11,(byte)0xfe,(byte)0x82,(byte)0xce,(byte)0x8d,'S'};
-        ivbytes = null;
+//        ivbytes = null;
         //加密字符串
 //        String content = "{\"Kcv\":\"123456\",\"IDc\":\"User1\",\"IDo\":\"DataOwner1\",\"IDv\":\"222\",\"TS4\":\"1564657964010\",\"lifetime4\":\"657964010\","
 //                + "\"AC\":{\"IDc\":\"User1\",\"permission\":{\"Folder_pdf\":{\"Folder_pdf\":[0,1,1,1]}," +
